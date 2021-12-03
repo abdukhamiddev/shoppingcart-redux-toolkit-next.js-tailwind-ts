@@ -1,4 +1,4 @@
-import { ReactNode } from "react"
+import { Children, ReactNode } from "react"
 
 interface ButtonProps {
     type?: 'primary' | 'secondary' | 'tertiary'
@@ -9,7 +9,13 @@ interface ButtonProps {
     children: ReactNode
 
 }
-const Button = ({ htmlType = 'button', type = 'primary', size = 'md', onClick, className, }: ButtonProps) => {
+const Button = ({ htmlType = 'button', type = 'primary', size = 'md', onClick, className, children }: ButtonProps) => {
 
 
+    return (
+        <button onClick={onClick} type={htmlType}>
+            {children}
+        </button>
+    )
 }
+export default Button
