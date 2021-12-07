@@ -1,3 +1,3 @@
-export const Signs={
-    USD:'$'
+export const SIGNS = {
+    USD: '$'
 }

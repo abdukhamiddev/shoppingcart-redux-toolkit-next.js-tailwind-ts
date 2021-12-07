@@ -4,7 +4,7 @@ import { Product } from "../types/Product";
 export const MOCK_PRODUCTS: Product[] = [
     {
         _id: "#4231648",
-        name: "Chiken Momo",
+        name: "Chicken Momo",
         price: { value: 10.5, currency: "USD" },
 
         photoURL:
