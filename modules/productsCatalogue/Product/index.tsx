@@ -1,4 +1,4 @@
-/* eslint-disable @next/next/no-img-element */
+
 import type { Product as ProductProps } from '../../../common/types/Product';
 import { useAppSelector, useAppDispatch } from '../../../common/hooks/store';
 import { useMemo } from 'react';
