@@ -21,20 +21,16 @@ const Subtotal = () => {
 	};
 
 	return (
-		<div className="sticky bottom-0 flex justify-between py-10 bg-gradient-to-t from-gray-100">
-			<span className="w-64">
+		<div className="">
+			<span className="">
 				<Button size="lg" onClick={handleBack} type="secondary">
 					<Chevron className="mr-2" /> Back to Catalogue
 				</Button>
 			</span>
 
-			<span className="text-xl text-gray-700">
+			<span className="">
 				Subtotal:
-				<Price
-					className="ml-2 text-2xl font-medium text-black"
-					value={totalPrice}
-					currency="USD"
-				/>
+				<Price className="" value={totalPrice} currency="USD" />
 			</span>
 		</div>
 	);

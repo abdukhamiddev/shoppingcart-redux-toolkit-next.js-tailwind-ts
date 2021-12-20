@@ -17,17 +17,20 @@ const CreditCard: FC<CreditCardProps> = ({ number, name, expires }) => {
 	);
 
 	return (
-		<div onClick={() => console.log(formattedNumber)} className="">
-			<VisaLogo className="" />
+		<div
+			onClick={() => console.log(formattedNumber)}
+			className="absolute flex flex-col justify-between w-full h-48 px-5 text-white rounded-lg shadow-2xl -left-24 bg-gradient-to-tr from-blue-500 to-blue-800 py-7"
+		>
+			<VisaLogo className="h-10 bg-white rounded-lg shadow-lg" />
 
-			<div className="">
+			<div className="flex items-center justify-between">
 				{formattedNumber.map((part, idx) => (
 					<span key={idx}>{part}</span>
 				))}
 			</div>
 
-			<div className="">
-				<span className="">{name || "Unknown"}</span>
+			<div className="flex items-center justify-between">
+				<span className="mr-4 truncate">{name || "Unknown"}</span>
 
 				<span>
 					{expires?.month ?? "MM"}/

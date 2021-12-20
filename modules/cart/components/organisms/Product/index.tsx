@@ -25,17 +25,21 @@ const Product: FC<ProductProps> = ({ _id, ...product }) => {
 	};
 
 	return (
-		<div className="">
-			<div className="r">
-				<img className="" src={product.photoURL} alt={product.name} />
+		<div className="grid items-center w-full grid-cols-3 py-4 border-b">
+			<div className="flex items-center">
+				<img
+					className="rounded-full w-36 h-36"
+					src={product.photoURL}
+					alt={product.name}
+				/>
 
-				<div className="">
+				<div className="flex flex-col ml-4">
 					<span className="mb-1">{product.name}</span>
-					<span className="">{_id}</span>
+					<span className="text-sm text-gray-400">{_id}</span>
 				</div>
 			</div>
 
-			<div className="">
+			<div className="flex justify-center">
 				<QuantityInput
 					onIncrease={handleQuantityIncrease}
 					onDecrease={handleQuantityDecrease}
@@ -44,9 +48,12 @@ const Product: FC<ProductProps> = ({ _id, ...product }) => {
 				/>
 			</div>
 
-			<div className="">
-				<Price className="" {...product.price} isSublimed={true} />
-				<CloseIcon className="" onClick={handleRemoveProduct} />
+			<div className="flex justify-between">
+				<Price className="text-lg" {...product.price} isSublimed={false} />
+				<CloseIcon
+					className="transition-opacity opacity-50 cursor-pointer hover:opacity-100"
+					onClick={handleRemoveProduct}
+				/>
 			</div>
 		</div>
 	);

@@ -46,21 +46,23 @@ export default function Cart() {
 
 	return (
 		<PageTemplate title="cart">
-			<section>
-				<section>
-					<h1>Shopping Cart</h1>
-					{products.length !== 0 ? (
-						<>
-							<div>
-								{products.map((product) => (
-									<Product key={product._id} {...product} />
-								))}
-							</div>
-							<Subtotal />
-						</>
-					) : (
-						<EmptyState />
-					)}
+			<section className="h-screen px-4">
+				<section className="flex">
+					<section className="flex flex-col w-full pr-20 mr-2 py-7">
+						<h1 className="mt-10 mb-8 text-3xl">Shopping Cart</h1>
+						{products.length !== 0 ? (
+							<>
+								<div className="flex flex-col flex-1">
+									{products.map((product) => (
+										<Product key={product._id} {...product} />
+									))}
+								</div>
+								<Subtotal />
+							</>
+						) : (
+							<EmptyState />
+						)}
+					</section>
 					<AsideWrapper title={"Card Details"}>
 						<CardSelect {...creditCard} />
 

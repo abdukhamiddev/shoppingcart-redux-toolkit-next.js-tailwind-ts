@@ -10,7 +10,7 @@ const Price = ({ value, currency, isSublimed, className }: PriceProps) => {
 	return (
 		<span className={className}>
 			{isSublimed ? <sup className="">{SIGNS[currency]}</sup> : SIGNS[currency]}
-			{value?.toFixed(2)}
+			{value.toFixed(2)}
 		</span>
 	);
 };
