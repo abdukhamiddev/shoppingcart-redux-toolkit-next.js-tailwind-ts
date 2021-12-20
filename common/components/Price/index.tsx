@@ -1,5 +1,5 @@
-import type { Price as PriceInterface } from '../../types/Price';
-import { SIGNS } from '../../constants/Currency';
+import type { Price as PriceInterface } from "../../types/Price";
+import { SIGNS } from "../../constants/Currency";
 
 interface PriceProps extends PriceInterface {
 	isSublimed?: boolean;
@@ -9,8 +9,8 @@ interface PriceProps extends PriceInterface {
 const Price = ({ value, currency, isSublimed, className }: PriceProps) => {
 	return (
 		<span className={className}>
-			{isSublimed ? <sup className=''>{SIGNS[currency]}</sup> : SIGNS[currency]}
-			{value.toFixed(2)}
+			{isSublimed ? <sup className="">{SIGNS[currency]}</sup> : SIGNS[currency]}
+			{value?.toFixed(2)}
 		</span>
 	);
 };

@@ -1,7 +1,7 @@
 import { Product, CartProduct } from '../../common/types/Product';
 import { MOCK_PRODUCTS } from '../../common/constants/Product';
 import { createSlice, PayloadAction } from '@reduxjs/toolkit';
-import { StoreState } from '../intex';
+import { StoreState } from '..';
 export type MainState = {
     products: Product[] | []
     cart: CartProduct[] | []
@@ -15,7 +15,7 @@ export const mainSlice = createSlice({
     initialState,
     reducers: {
         addProductToCart: (state, { payload }: PayloadAction<string>) => {
-            const targetProduct = state.products.find(({ _id }) => { _id === payload })!
+            const targetProduct = state.products.find(({ _id }) => _id === payload)!
             state.cart = [...state.cart, { ...targetProduct, quantity: 1 }]
 
         },
@@ -23,18 +23,18 @@ export const mainSlice = createSlice({
             state.cart = state.cart.filter(({ _id }) => _id !== payload)
         },
         increaseProductQuantity: (state, { payload }: PayloadAction<string>) => {
-            const price = state.products.find(({ _id }) => {
+            const price = state.products.find(({ _id }) =>
                 _id === payload
-            })!.price
+            )!.price
             const target = state.cart[state.cart.findIndex(({ _id }) => _id === payload)]!
             target.quantity += 1
             target.price.value = target.quantity * price.value
 
         },
         decreaseProductQuantity: (state, { payload }: PayloadAction<string>) => {
-            const price = state.products.find(({ _id }) => {
+            const price = state.products.find(({ _id }) =>
                 _id === payload
-            })!.price
+            )!.price
             const target = state.cart[state.cart.findIndex(({ _id }) => _id === payload)]!
 
             if (target.quantity - 1 !== -1) {
@@ -44,9 +44,9 @@ export const mainSlice = createSlice({
             target.price.value = target.quantity * price.value
         },
         enterProductQuantity: (state, { payload }: PayloadAction<{ _id: string, quantity: number }>) => {
-            const price = state.products.find(({ _id }) => {
+            const price = state.products.find(({ _id }) =>
                 _id === payload._id
-            })!.price
+            )!.price
             const target = state.cart[state.cart.findIndex(({ _id }) => _id === payload._id)]!
 
             target.quantity = payload.quantity

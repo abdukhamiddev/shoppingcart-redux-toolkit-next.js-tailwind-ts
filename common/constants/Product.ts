@@ -3,7 +3,7 @@ import { Product } from "../types/Product";
 
 export const MOCK_PRODUCTS: Product[] = [
     {
-        _id: "#4231648",
+        _id: "1",
         name: "Chicken Momo",
         price: { value: 10.5, currency: "USD" },
 
@@ -11,7 +11,7 @@ export const MOCK_PRODUCTS: Product[] = [
             "https://www.kindpng.com/picc/m/69-694225_plate-food-png-free-transparent-png.png",
     },
     {
-        _id: "#4231649",
+        _id: "2",
         name: "Mexican potatoes",
         price: { value: 8.5, currency: "USD" },
 
@@ -19,7 +19,7 @@ export const MOCK_PRODUCTS: Product[] = [
             "https://www.pngitem.com/pimgs/m/151-1519875_food-dish-png-transparent-png.png",
     },
     {
-        _id: "#4231650",
+        _id: "3",
         name: "Breakfast Meal",
         price: { value: 5.9, currency: "USD" },
 
@@ -28,7 +28,7 @@ export const MOCK_PRODUCTS: Product[] = [
     },
 
     {
-        _id: "#4231651",
+        _id: "4",
         name: "Spicy Chicken momo",
         price: { value: 6.9, currency: "USD" },
 
@@ -37,7 +37,7 @@ export const MOCK_PRODUCTS: Product[] = [
     },
 
     {
-        _id: "#4231652",
+        _id: "5",
         name: "Spicy Chicken",
         price: { value: 4.9, currency: "USD" },
 
@@ -46,7 +46,7 @@ export const MOCK_PRODUCTS: Product[] = [
     },
 
     {
-        _id: "#4231653",
+        _id: "6",
         name: "Healthy Salad",
         price: { value: 2.9, currency: "USD" },
 
