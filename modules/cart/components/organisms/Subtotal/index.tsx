@@ -21,17 +21,21 @@ const Subtotal = () => {
 	};
 
 	return (
-		<div className="">
-			<span className="">
+		<div className="flex flex-col items-center justify-center">
+			<div className="pt-2">
 				<Button size="lg" onClick={handleBack} type="secondary">
 					<Chevron className="mr-2" /> Back to Catalogue
 				</Button>
-			</span>
-
-			<span className="">
-				Subtotal:
-				<Price className="" value={totalPrice} currency="USD" />
-			</span>
+			</div>
+			<div className="flex pt-4 space-x-4">
+				<h1 className="text-lg font-bold">Subtotal:</h1>
+				<Price
+					className="text-lg font-semibold text-blue-800"
+					value={totalPrice}
+					currency="USD"
+					isSublimed={false}
+				/>
+			</div>
 		</div>
 	);
 };

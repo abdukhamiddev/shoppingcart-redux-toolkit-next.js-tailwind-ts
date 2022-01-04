@@ -18,11 +18,11 @@ const Button = ({
 	children,
 }: ButtonProps) => {
 	const buttonClasses = cn(
-		"w-full bg-gradient-to-tr  flexfont-sans font-extralight items-center justify-center text-white flex",
+		"w-full bg-gradient-to-tr  flex font-sans font-extralight items-center justify-center text-white flex",
 		"rounded-md shadow-sm transition-opacity hover:opacity-90",
 		{
-			"py-2.5 text-lg": size === "lg",
-			"py-2 text-md": size === "md",
+			"py-2.5 mx-2 text-lg": size === "lg",
+			"py-2 mx-1 text-md": size === "md",
 		},
 
 		{

@@ -19,7 +19,7 @@ const CreditCard: FC<CreditCardProps> = ({ number, name, expires }) => {
 	return (
 		<div
 			onClick={() => console.log(formattedNumber)}
-			className="absolute flex flex-col justify-between w-full h-48 px-5 text-white rounded-lg shadow-2xl -left-24 bg-gradient-to-tr from-blue-500 to-blue-800 py-7"
+			className="absolute flex flex-col justify-between w-full h-48 px-5 mt-16 text-white rounded-lg shadow-2xl lg:-left-24 bg-gradient-to-tr from-blue-500 to-blue-800 py-7 lg:mt-0"
 		>
 			<VisaLogo className="h-10 bg-white rounded-lg shadow-lg" />
 

@@ -8,7 +8,7 @@ export default function Catalogue() {
 	const products = useAppSelector(({ main }) => main.products);
 	return (
 		<PageTemplate title="Dishes">
-			<section className="py-4 lg:flex md:flex">
+			<section className="py-4 lg:flex md:flex ">
 				<Aside
 					menuItems={[
 						{ to: "/overview", label: "Overview" },
@@ -20,7 +20,7 @@ export default function Catalogue() {
 				/>
 				<section className="w-full p-10 rounded-md ">
 					<h1 className="mb-8 text-3xl">Recent Dishes</h1>
-					<section className="grid lg:gap-8 lg:grid-cols-3 md:grid-cols-2 md:gap-4">
+					<section className="grid gap-4 lg:gap-8 lg:grid-cols-3 md:grid-cols-2 md:gap-4">
 						{products.map((product) => (
 							<Product key={product._id} {...product} />
 						))}

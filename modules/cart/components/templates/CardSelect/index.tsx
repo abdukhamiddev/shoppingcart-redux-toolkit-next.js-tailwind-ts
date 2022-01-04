@@ -9,10 +9,10 @@ const CardSelect: FC<CreditCardProps> = (cardInfo) => {
 	return (
 		<div className="mt-8">
 			<span className="text-gray-400">Card Type</span>
-			<div className="relative flex items-center w-full h-48 mt-5 mb-10">
+			<div className="relative grid w-full grid-cols-1 mt-5 mb-10 h-52 lg:items-center lg:h-48">
 				<CreditCard {...cardInfo} />
 
-				<MasterCardLogo className="absolute transition-opacity cursor-pointer w-28 -right-12 opacity-70 hover:opacity-100" />
+				<MasterCardLogo className="relative z-10 transition-opacity cursor-pointer w-28 opacity-70 hover:opacity-100 bg-slate-100 lg:absolute lg:-right-14" />
 			</div>
 		</div>
 	);

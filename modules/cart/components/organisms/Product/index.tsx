@@ -25,7 +25,7 @@ const Product: FC<ProductProps> = ({ _id, ...product }) => {
 	};
 
 	return (
-		<div className="grid items-center w-full grid-cols-3 py-4 border-b">
+		<div className="grid items-center w-full py-4 border-b xl:grid-cols-3">
 			<div className="flex items-center">
 				<img
 					className="rounded-full w-36 h-36"

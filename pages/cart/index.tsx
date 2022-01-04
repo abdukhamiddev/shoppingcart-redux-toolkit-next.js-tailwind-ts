@@ -46,9 +46,9 @@ export default function Cart() {
 
 	return (
 		<PageTemplate title="cart">
-			<section className="h-screen px-4">
-				<section className="flex">
-					<section className="flex flex-col w-full pr-20 mr-2 py-7">
+			<section className="h-screen px-4 md:px-[4vw]">
+				<section className="grid grid-cols-1 c md:grid-cols-2">
+					<section className="flex flex-col items-center justify-center w-full md:pr-20 md:mr-2 py-7">
 						<h1 className="mt-10 mb-8 text-3xl">Shopping Cart</h1>
 						{products.length !== 0 ? (
 							<>
@@ -66,7 +66,7 @@ export default function Cart() {
 					<AsideWrapper title={"Card Details"}>
 						<CardSelect {...creditCard} />
 
-						<div className="flex flex-col flex-1">
+						<div className="flex flex-col flex-1 pt-6 lg:pt-0">
 							<Input
 								onChange={handleCardNameChange}
 								placeholder="Name on Card"
@@ -76,13 +76,13 @@ export default function Cart() {
 								placeholder="Card on Number"
 							/>
 
-							<div className="flex justify-between w-full mt-2">
+							<div className="grid justify-between w-full grid-cols-1 mt-2 lg:grid-cols-2">
 								<div className="relative w-full">
 									<span className="absolute text-sm text-gray-400 -top-6">
 										Expiration Date
 									</span>
 
-									<div className="grid grid-cols-2 gap-3 mt-1.5">
+									<div className="grid grid-cols-2 gap-3 mt-1.5 ">
 										<Select
 											onChange={handleMonthChange}
 											options={MONTH_OPTIONS}
@@ -96,7 +96,7 @@ export default function Cart() {
 									</div>
 								</div>
 
-								<Input className="ml-10" placeholder={"CVV"} />
+								<Input className="lg:ml-10" placeholder={"CVV"} />
 							</div>
 						</div>
 
