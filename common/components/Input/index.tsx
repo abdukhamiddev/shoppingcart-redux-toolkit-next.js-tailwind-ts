@@ -19,12 +19,10 @@ const Input = ({ placeholder, onChange, type, className }: InputProps) => {
 				type={type}
 				onChange={onChange}
 				spellCheck={false}
-				placeholder=""
+				placeholder={placeholder}
 				className="absolute z-50 w-full pt-1 pb-1 text-white bg-transparent border-b border-gray-600"
 			/>
-			<span className="absolute top-0 left-0 text-gray-400 transition-all input-placeholder -z-10">
-				{placeholder}
-			</span>
+			
 		</div>
 	);
 };
